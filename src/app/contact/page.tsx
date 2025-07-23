@@ -5,15 +5,13 @@ import Hero from '@/components/Hero';
 import Search from '@/components/Search';
 import Events from '@/components/Events';
 import Favorites from '@/components/Favorites';
+import ContactUs from '@/components/ContactUs';
 
 export default function Home() {
   return (
     <main>
       <Navbar />
-      <Hero />
-      <Search />
-      <Events />
-      <Favorites />
+      <ContactUs />
       <Footer />
     </main>
   );
