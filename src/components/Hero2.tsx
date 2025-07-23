@@ -1,9 +1,11 @@
+import Image from 'next/image';
+
 const Hero2 = () => {
   return (
     <>
       <div className="xs:mx-20 lg:mx-40 xs:my-10 sm:my-14 md:my-16 lg:my-20">
         <div className=" flex lg:flex-row xs:flex-col">
-          <img
+          <Image
             src="/ceramics3.avif"
             alt="ceramics"
             className="items-center object-cover xs:max-w-[460px] sm:max-w-[585px] lg:min-w-[400px] rounded-xl shadow-2xl"

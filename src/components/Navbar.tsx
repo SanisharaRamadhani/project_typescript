@@ -19,7 +19,7 @@ const Navbar = () => {
         <div className="lg:h-[120px] md:h-[115px] sm:h-[110px] xs:h-[105px] flex items-center justify-between lg:gap-[100px] md:gap-[75px] sm:gap-[50px] xs:gap-[25px] duration-1000 xs:mx-10 md:mx-20">
           <div>
             <Link href="/">
-              <img
+              <Image
                 src="/dirjaslogo.png"
                 alt="logos"
                 className="object-cover h-[100px] w-[100px]"

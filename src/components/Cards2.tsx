@@ -7,7 +7,7 @@ const Cards2 = () => {
       <div className="cursor-pointer">
         <div className="cursor-pointers block max-w-[18rem] rounded-lg bg-amber-400 ">
           <div className="relative overflow-hidden bg-cover bg-no-repeat">
-            <img className="rounded-t-lg" src="/ceramics6.avif" alt="hdh" />
+            <Image className="rounded-t-lg" src="/ceramics6.avif" alt="hdh" />
           </div>
           <div className="p-6">
             <div className="text-base text-neutral-600 dark:text-neutral-200">

@@ -12,10 +12,11 @@ const LikeUser = () => {
   return (
     <>
       <div className="flex xs:flex-col md:flex-row xs:my-5 lg:my-10 xs:justify-center md:justify-around items-center">
-        <img
+        <Image
           src="/ceramics2.avif"
+          alt="Logo menu open"
           className="xs:w-[200px] md:w-[200px] rounded-3xl xs:mx-0 md:ml-[10px] lg:ml-[20px] my-[20px]"
-        ></img>
+        ></Image>
         <div className="flex flex-col items-center">
           <div className="text-xl font-bold mt-5">POT</div>
           <div className="flex flex-row mt-5 justify-around">

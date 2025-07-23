@@ -7,7 +7,7 @@ const Cards = () => {
       <Link href="/shop/products" className="cursor-pointer">
         <div className="cursor-pointers block max-w-[18rem] rounded-lg bg-amber-400 ">
           <div className="relative overflow-hidden bg-cover bg-no-repeat">
-            <img
+            <Image
               className="rounded-t-lg"
               src="/ceramics6.avif"
               alt="product1"

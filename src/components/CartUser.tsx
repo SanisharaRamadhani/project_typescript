@@ -7,10 +7,11 @@ const CartUser = () => {
     <>
       <div className="flex xs:flex-col md:flex-row xs:my-5 lg:my-10 xs:justify-center md:justify-around items-center">
         <FaCheck className="min-w-[20px] xs:text-[20px] xs:mt-[10px] md:mt-0 xs:mx-[10px] lg:ml-20 border-2 border-black p-1"></FaCheck>
-        <img
+        <Image
           src="/ceramics2.avif"
+          alt="Logo Cart"
           className="xs:w-[200px] md:w-[200px] rounded-3xl xs:mx-0 lg:mx-20 xs:mt-[10px] md:mt-0"
-        ></img>
+        ></Image>
         <div className="flex flex-col items-center xs:mt-[10px] md:mt-0">
           <div className="text-xl font-bold mt-5">POT</div>
           <div className="flex flex-row mt-5">

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import CartUser from './CartUser';
 import { FaAngleRight } from 'react-icons/fa';
@@ -23,10 +24,11 @@ const Transaction = () => {
         </div>
         <div className="border-4 rounded-xl xs:min-w-[50px] flex flex-col justify-center items-center ">
           <div className="flex xs:flex-col md:flex-row justify-center items-center ">
-            <img
+            <Image
               src="/ceramics2.avif"
+              alt="Logo menu open"
               className="xs:w-[200px] md:w-[200px] rounded-3xl xs:mx-0 md:mx-10 lg:mx-20 xs:my-5"
-            ></img>
+            ></Image>
             <div className="flex flex-col items-center xs:mx-0 md:mx-10 lg:mx-20 xs:my-5">
               <div className="text-xl font-bold mt-5">POT</div>
               <div className="flex flex-row mt-5">
