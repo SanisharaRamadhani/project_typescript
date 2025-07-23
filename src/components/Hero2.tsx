@@ -18,7 +18,7 @@ const Hero2 = () => {
               Dirja Ceramics is a home industry that makes pottery to decorate
               the interior and exterior of your home, is simply dummy text of
               the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s
+              industry&#39;s standard dummy text ever since the 1500s
             </h1>
           </div>
         </div>

@@ -47,7 +47,7 @@ const Hero = () => {
                   <BsChevronCompactLeft onClick={prevSlide} className="" />{' '}
                 </div>
                 <h1>
-                  Now it's easier to get your interior or exterior ceramics
+                  Now it&#39;s easier to get your interior or exterior ceramics
                 </h1>
                 <div className="rounded-full p-1 mx-2 bg-black/20 text-white cursor-pointer">
                   <BsChevronCompactRight onClick={nextSlide} className="" />

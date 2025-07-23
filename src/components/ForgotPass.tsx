@@ -12,8 +12,8 @@ const ForgotPass = () => {
           <form>
             <div className="mb-4">
               <label className="block mb-1" htmlFor="email">
-                Please enter the email address you'd like your password reset
-                information to
+                Please enter the email address you&#39;d like your password
+                reset information to
               </label>
               <input
                 id="email"
