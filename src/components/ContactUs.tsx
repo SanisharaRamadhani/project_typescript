@@ -1,93 +1,79 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { FaFacebook, FaWhatsappSquare, FaInstagram } from 'react-icons/fa';
-import { CiMail, CiLocationOn } from 'react-icons/ci';
+'use client';
+import React from 'react';
+import { FaFacebook, FaInstagram, FaWhatsappSquare } from 'react-icons/fa';
+import { CiMail } from 'react-icons/ci';
+
+const contacts = [
+  {
+    icon: <FaFacebook className="text-[40px] text-blue-700" />,
+    label: 'Sekaramik Chilpa Wijangga',
+    href: 'https://www.facebook.com/sansan.dcrs/',
+  },
+  {
+    icon: <FaInstagram className="text-[40px] text-red-400" />,
+    label: 'Sekaramik Chilpa Wijangga',
+    href: '#',
+  },
+  {
+    icon: <FaWhatsappSquare className="text-[40px] text-green-500" />,
+    label: '085655960543',
+    href: '#',
+  },
+  {
+    icon: <CiMail className="text-[40px] text-rose-700" />,
+    label: 'sekaramik.cw@gmail.com',
+    href: '#',
+  },
+];
 
 const ContactUs = () => {
   return (
-    <>
-      <div className="mx-20">
-        <div className="mx-20 lg:mt-[130px] md:mt-[120px] sm:mt-[100px] xs:mt-[80px] flex justify-center z-20 font-bold lg:text-[50px] md:text-[38px] sm:text-[26px] xs:text-[20px] text-slate-800 my-5">
+    <div className="w-full bg-white text-gray-900 py-10 px-6 md:px-10 lg:px-20 space-y-20">
+      {/* Decorative Heading */}
+      <div className="relative">
+        <h1 className="absolute inset-0 text-black/10 text-5xl md:text-7xl font-bold text-center z-0 text-shadow-lg">
           Kontak Kami
-        </div>
-        <div className="flex flex-col items-center mx-20 xs:mt-[160px] sm:mt-[170px] md:mt-[190px] z-10 absolute inset-x-0 top-0 font-bold lg:text-[130px] md:text-[95px] sm:text-[75px] xs:text-[50px] text-black/10 my-5">
-          <hr className="border-solid md:border-b-4 xs:border-b-2 border-amber-400 lg:w-[310px] md:w-[230px] sm:w-[160px] xs:w-[130px]"></hr>
-          <div className="xs:-mt-[5px] sm:-mt-[10px] md:-mt-[15px] lg:-mt-[20px]">
-            Kontak Kami
-          </div>
+        </h1>
+        <div className="relative z-10 text-center mt-10">
+          <h2 className="text-3xl font-bold text-amber-600">Kantor Kami</h2>
+          <p className="mt-2">Kami dengan senang hati akan membantu Anda!</p>
         </div>
       </div>
-      <div className="mx-20">
-        <div className="flex justify-center">
-          <div className="min-w-[323px] max-h-[400px] grid grid-cols-4 lg:mt-[110px] md:mt-[80px] xs:mt-[40px] border-8 border-amber-400 rounded-lg">
-            <div className="grid grid-rows-4 justify-center py-10">
-              <a href="https://www.facebook.com/sansan.dcrs/" target="_blank">
-                <FaFacebook className="text-[40px] my-1 text-blue-700 cursor-pointer ">
-                  facebook
-                </FaFacebook>
-              </a>
-              <a href="#" target="_blank">
-                <FaInstagram className="text-[40px] my-1 text-red-400"></FaInstagram>
-              </a>
-              <a href="#" target="_blank">
-                <FaWhatsappSquare className="text-[40px] my-1 text-green-500"></FaWhatsappSquare>
-              </a>
-              <a href="#" target="_blank">
-                <CiMail className="text-[40px] my-1 text-rose-700"></CiMail>
-              </a>
+
+      {/* Contact Info Section */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Social Media & Info */}
+        <div className="border-8 border-amber-400 rounded-lg p-6">
+          <div className="grid grid-cols-4 gap-4">
+            <div className="flex flex-col items-center space-y-6">
+              {contacts.map((c, i) => (
+                <a href={c.href} target="_blank" key={i}>
+                  {c.icon}
+                </a>
+              ))}
             </div>
-            <div className="grid grid-rows-4 col-span-3 justify-start py-10">
-              <a href="https://www.facebook.com/sansan.dcrs/" target="_blank">
-                <h1 className="my-4 ">Sekaramik Chilpa Wijangga</h1>
-              </a>
-              <a href="#" target="_blank">
-                <h1 className="my-3">Sekaramik Chilpa Wijangga</h1>
-              </a>
-              <a href="#" target="_blank">
-                <h1 className="my-3">085655960543</h1>
-              </a>
-              <a href="#" target="_blank">
-                <h1 className="my-4">sekaramik.cw@gmail.com</h1>
-              </a>
+            <div className="col-span-3 flex flex-col justify-center space-y-6">
+              {contacts.map((c, i) => (
+                <a href={c.href} target="_blank" key={i}>
+                  <h1 className="text-lg font-medium">{c.label}</h1>
+                </a>
+              ))}
             </div>
           </div>
         </div>
-      </div>
-      <div className="mx-20">
-        <div className="mx-20 lg:mt-[185px] md:mt-[150px] sm:mt-[130px] xs:mt-[80px] flex justify-center z-20 font-bold lg:text-[50px] md:text-[38px] sm:text-[26px] xs:text-[20px] text-slate-800 my-5">
-          Kantor Kami
-        </div>
-        <div className="flex flex-col items-center mx-20 xs:mt-[650px] sm:mt-[720px] md:mt-[810px] lg:mt-[900px] z-10 absolute inset-0 font-bold lg:text-[130px] md:text-[95px] sm:text-[75px] xs:text-[50px] text-black/10 my-5">
-          <hr className="border-solid md:border-b-4 xs:border-b-2 border-amber-400 lg:w-[310px] md:w-[230px] sm:w-[160px] xs:w-[130px]"></hr>
-          <div className="xs:-mt-[3px] sm:-mt-[7px] lg:-mt-[15px]">
-            Kantor Kami
-          </div>
-        </div>
-        <div className="xs:mt-[60px] sm:mt-[80px] md:mt-[100px] lg:mt-[120px]">
-          <div className="flex flex-rows justify-center items-center xs:min-w-[320px] sm:min-w-[420px] md:min-w-[520px] lg:min-w-[620px]">
-            <a
-              href="https://maps.app.goo.gl/TAVveSnGctTrEmr5A"
-              target="_blank"
-              className="flex flex-rows justify-center items-center"
-            >
-              <CiLocationOn className="text-red-600 xs:text-[35px] sm:text-[40px] md:text-[45px] lg:text-[60px]"></CiLocationOn>
-              <h1 className="text-justify xs:text-[15px] sm:text-[17px] md:text-[19px] lg:text-[21px]">
-                Sekarkalam, Kel. Melikan, Kec. Wedi, Kab. Klaten
-              </h1>
-            </a>
-          </div>
-        </div>
-        <div className="flex justify-center">
-          <div className="min-w-[323px] min-h-[250px] mb-10 lg:mt-[80px] md:mt-[70px] sm:mt-[60px] xs:mt-[50px] border-8 border-amber-400 rounded-lg">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.06593774348565!2d110.62835392330008!3d-7.783993277997501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a48a80b5bd489%3A0xf8a29fa20991de67!2sToko%20Dirjo!5e0!3m2!1sid!2sid!4v1710583025663!5m2!1sid!2sid"
-              title="Responsive Google Maps"
-              className="items-center min-w-[306px] min-h-[250px]"
-            ></iframe>
-          </div>
+
+        {/* Google Maps */}
+        <div className="border-8 border-amber-400 rounded-lg overflow-hidden aspect-video">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4936.1725688937295!2d110.62597547593964!3d-7.783906577238997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a48a80b5bd489%3A0xf8a29fa20991de67!2sToko%20Dirjo!5e1!3m2!1sid!2sid!4v1753362714931!5m2!1sid!2sid"
+            className="w-full h-full"
+            loading="lazy"
+            allowFullScreen
+          ></iframe>
         </div>
       </div>
-    </>
+    </div>
   );
 };
+
 export default ContactUs;

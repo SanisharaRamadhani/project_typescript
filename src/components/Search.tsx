@@ -1,68 +1,69 @@
+'use client';
+import { useState } from 'react';
+
 const Search = () => {
+  const [product, setProduct] = useState('');
+  const [category, setCategory] = useState('');
+  const [price, setPrice] = useState('');
+
   return (
-    <>
-      {/* filter utama? */}
-      <div className="flex items-center justify-center pb-[36px] mt-10 mx-5">
-        <div className=" w-[900px] h-[140px] bg-white border border-[#555486] flex justify-center items-center rounded-[16px] right-[100px] shadow-md sm:text-[17px] xs:text-[12px]">
-          <div className="grid grid-cols-3 gap-[50px] mx-5">
-            {/* seach */}
-            <div>
-              <div className="px-4">Search Product</div>
-              <div>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  placeholder="Pot"
-                  className="py-2 px-4 md:px-5 w-full appearance-none text-input xs:text-[9px] sm:text-[12px] md:text-[15px] font-body placeholder-body min-h-[15px] transition duration-200 ease-in-out bg-white  focus:outline-none focus:border-heading h-11 md:h-12"
-                  autoComplete="off"
-                  spellCheck="false"
-                  aria-invalid="false"
-                />
-              </div>
-              <hr className=" pr-[16px] border-solid border-gray-400 md:w-[200px] sm:w-[150px] xs:w-[100px]" />
-            </div>
+    <div className="flex items-center justify-center px-4 mt-10 pb-10">
+      <div className="w-full max-w-5xl bg-white border border-[#555486] rounded-2xl shadow-md p-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          {/* Search Product */}
+          <div>
+            <label htmlFor="product" className="block text-sm font-medium mb-2">
+              Search Product
+            </label>
+            <input
+              id="product"
+              name="product"
+              type="text"
+              placeholder="Pot"
+              value={product}
+              onChange={(e) => setProduct(e.target.value)}
+              className="w-full h-11 px-4 text-sm border border-gray-300 rounded-md focus:ring focus:ring-amber-300 focus:outline-none"
+            />
+          </div>
 
-            {/* place */}
-            <div>
-              <div className=" px-4">Category</div>
-              <div>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  placeholder="Outdoor"
-                  className="py-5 px-4 md:px-5 w-full appearance-none text-input xs:text-[9px] sm:text-[12px] md:text-[15px] font-body placeholder-body min-h-12 transition duration-200 ease-in-out bg-white  focus:outline-none focus:border-heading h-11 md:h-12"
-                  autoComplete="off"
-                  spellCheck="false"
-                  aria-invalid="false"
-                />
-              </div>
-              <hr className="border-solid border-gray-400 md:w-[200px] sm:w-[150px] xs:w-[100px]" />
-            </div>
+          {/* Category */}
+          <div>
+            <label
+              htmlFor="category"
+              className="block text-sm font-medium mb-2"
+            >
+              Category
+            </label>
+            <input
+              id="category"
+              name="category"
+              type="text"
+              placeholder="Outdoor"
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+              className="w-full h-11 px-4 text-sm border border-gray-300 rounded-md focus:ring focus:ring-amber-300 focus:outline-none"
+            />
+          </div>
 
-            {/* time */}
-
-            <div>
-              <div className=" px-4">Price</div>
-              <div>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  placeholder="Rp. 0-1.000.000"
-                  className="py-2 px-4 md:px-5 w-full appearance-none text-input xs:text-[9px] sm:text-[12px] md:text-[15px] font-body placeholder-body min-h-12 transition duration-200 ease-in-out bg-white  focus:outline-none focus:border-heading h-11 md:h-12"
-                  autoComplete="off"
-                  spellCheck="false"
-                  aria-invalid="false"
-                />
-              </div>
-              <hr className="border-solid border-gray-400 md:w-[200px] sm:w-[150px] xs:w-[100px]" />
-            </div>
+          {/* Price */}
+          <div>
+            <label htmlFor="price" className="block text-sm font-medium mb-2">
+              Price
+            </label>
+            <input
+              id="price"
+              name="price"
+              type="text"
+              placeholder="Rp. 0-1.000.000"
+              value={price}
+              onChange={(e) => setPrice(e.target.value)}
+              className="w-full h-11 px-4 text-sm border border-gray-300 rounded-md focus:ring focus:ring-amber-300 focus:outline-none"
+            />
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
+
 export default Search;

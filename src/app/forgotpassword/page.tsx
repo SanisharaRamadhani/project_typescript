@@ -2,7 +2,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ForgotPass from '@/components/ForgotPass';
 
-const Home = () => {
+const ForgotPasswordPage = () => {
   return (
     <main>
       <Navbar />
@@ -12,4 +12,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default ForgotPasswordPage;

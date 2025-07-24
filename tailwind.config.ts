@@ -29,8 +29,18 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+      },
+      colors: {
+        primary: '#123456',
+        secondary: '#abcdef',
+      },
+      textShadow: {
+        lg: '2px 2px 4px rgba(0, 0, 0, 0.1)',
+      },
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-textshadow')],
 };
 export default config;

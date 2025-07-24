@@ -2,16 +2,14 @@ import Login from '@/components/Login';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 
-const Home = () => {
+const LoginPage = () => {
   return (
-    <>
-      <div>
-        <Navbar />
-        <Login />
-        <Footer />
-      </div>
-    </>
+    <main>
+      <Navbar />
+      <Login />
+      <Footer />
+    </main>
   );
 };
 
-export default Home;
+export default LoginPage;

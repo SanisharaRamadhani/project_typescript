@@ -2,16 +2,14 @@ import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import Transaction from '@/components/Transaction';
 
-const Home = () => {
+const TransactionPage = () => {
   return (
-    <>
-      <div>
-        <Navbar />
-        <Transaction />
-        <Footer />
-      </div>
-    </>
+    <main>
+      <Navbar />
+      <Transaction />
+      <Footer />
+    </main>
   );
 };
 
-export default Home;
+export default TransactionPage;

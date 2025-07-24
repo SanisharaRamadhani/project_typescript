@@ -12,7 +12,6 @@ const Home = () => {
         <Events />
         <Footer />
       </div>
-      x
     </>
   );
 };

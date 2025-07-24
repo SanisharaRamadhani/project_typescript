@@ -2,7 +2,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import SignUp from '@/components/SignUp';
 
-const Home = () => {
+const SignUpPage = () => {
   return (
     <main>
       <Navbar />
@@ -11,4 +11,5 @@ const Home = () => {
     </main>
   );
 };
-export default Home;
+
+export default SignUpPage;
